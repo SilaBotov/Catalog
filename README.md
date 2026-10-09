@@ -1,2 +1,1 @@
-# Catalog
-Каталог ботов
+# silabotov.github.io
