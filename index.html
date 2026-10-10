@@ -32,7 +32,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.6 Onest,'Helvetica Neue',Arial,sans-serif}
 h1,h2,h3{font-family:Montserrat,'Helvetica Neue',Arial,sans-serif;margin:0;line-height:1.12}
 a{color:inherit}
-.w{max-width:1200px;margin:0 auto;padding:0 22px}
+.w{width:min(1180px,calc(100% - 32px));max-width:none;margin:0 auto;padding:0}
 .hero{background:radial-gradient(900px 420px at 85% 0%,rgba(123,92,255,.35),transparent 70%),#080A26;color:#fff;padding-bottom:64px;border-bottom:1px solid var(--ln)}
 nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
 .logo{display:flex;align-items:center;gap:8px;font:800 20px Montserrat,Arial,sans-serif;text-decoration:none}
@@ -161,11 +161,11 @@ h2{max-width:none}.steps p,.intro p{max-width:none}
 .hero h1.sz{font-size:clamp(26px,3.6vw,38px);font-weight:800;letter-spacing:0;max-width:none}
 
 /* ===== Шапка и подвал, как на главной silabotov.ru (стили из style.css главной) ===== */
-.site-header,.site-footer{--bg:#0c0a1a;--line:rgba(75,202,221,.15);--text:#f0f2ff;--muted:#a8b4d4;--primary:#4bcadd;--primary-strong:#3ab8cc;--container:1156px;font-family:'Inter','Segoe UI',Arial,sans-serif;color:var(--text);line-height:1.6;font-size:16px;text-align:left;-webkit-font-smoothing:antialiased}
+.site-header,.site-footer{--bg:#0c0a1a;--line:rgba(75,202,221,.15);--text:#f0f2ff;--muted:#a8b4d4;--primary:#4bcadd;--primary-strong:#3ab8cc;--container:1180px;font-family:'Inter','Segoe UI',Arial,sans-serif;color:var(--text);line-height:1.6;font-size:16px;text-align:left;-webkit-font-smoothing:antialiased}
 .site-header a,.site-footer a{color:inherit;text-decoration:none}
 .site-header img,.site-footer img{display:block;max-width:100%}
 .site-header nav{padding:0}
-.site-header .container,.site-footer .container{width:min(var(--container),calc(100% - 44px));margin:0 auto}
+.site-header .container,.site-footer .container{width:min(var(--container),calc(100% - 32px));margin:0 auto}
 .site-header{position:sticky;top:0;z-index:20;padding:14px 0;backdrop-filter:blur(24px);background:rgba(12,10,26,.85);border-bottom:1px solid var(--line)}
 .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:inline-flex;align-items:center;gap:12px;flex-shrink:0}
@@ -197,6 +197,8 @@ section.hero{padding-top:28px}
 @media (max-width:900px){.site-header__inner{flex-wrap:wrap}.site-nav{order:3;width:100%;justify-content:flex-start;gap:12px}.site-socials{margin-left:auto}.site-footer__inner{grid-template-columns:minmax(0,1fr)}.site-footer__links{justify-content:flex-start}}
 @media (max-width:480px){.site-nav{gap:8px}.site-nav a{font-size:.88rem}.brand small{display:none}}
 @media (max-width:640px){.site-nav a.button--ghost{display:none}}
+
+@media (max-width:480px){.w,.site-header .container,.site-footer .container{width:min(1180px,calc(100% - 20px))}}
 </style>
 <link rel="icon" type="image/png" href="https://silabotov.ru/assets/img/logo-silabotov.png">
 <link rel="apple-touch-icon" href="https://silabotov.ru/assets/img/logo-silabotov.png">
